@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty - Bramy DIY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="bg-teal-600 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Bramy DIY</a>
+        <nav class="space-x-4">
+            <a href="/wuja/index.html" class="hover:underline">Strona główna</a>
+            <a href="/wuja/products.html" class="hover:underline">Produkty</a>
+            <a href="/wuja/contact.html" class="hover:underline">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section --><section class="relative bg-gray-800 text-white py-16 overflow-hidden">
+    <!-- Tło ozdobne -->
+    <div class="absolute inset-0">
+        <img src="https://picsum.photos/1920/1080?random=50" alt="Tło produktów" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-gray-800/90"></div>
+    </div>
+
+    <!-- Zawartość sekcji -->
+    <div class="relative container mx-auto px-4 text-center">
+        <h1 class="text-5xl font-extrabold mb-6 animate-fade-in">
+            Nasze produkty
+        </h1>
+        <p class="text-lg max-w-2xl mx-auto mb-8 animate-fade-in-delayed">
+            Oferujemy szeroki wybór bram do własnego montażu. Trwałość, estetyka i prostota montażu to nasze priorytety.
+        </p>
+        <a href="#products" class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition animate-bounce-in">
+            Zobacz ofertę
+        </a>
+    </div>
+
+    <!-- Dekoracyjne elementy -->
+    <div class="absolute -top-12 -left-12 w-32 h-32 bg-teal-500 rounded-full opacity-30 blur-xl"></div>
+    <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-teal-600 rounded-full opacity-20 blur-2xl"></div>
+</section>
+
+<!-- Tailwind Custom Animations -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+
+    .animate-bounce-in {
+        animation: bounce-in 1.5s ease-out;
+    }
+</style>
+
+
+<!-- Filters Section -->
+<section class="py-8">
+    <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
+        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+            <input type="text" id="search" placeholder="Wyszukaj produkty..."
+                   class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-teal-500">
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-end">
+            <select id="sort" class="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-teal-500">
+                <option value="price-asc">Cena rosnąco</option>
+                <option value="price-desc">Cena malejąco</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+            <img src="https://picsum.photos/300/200?random=1" alt="Brama stalowa" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Brama stalowa</h3>
+            <p class="text-gray-700 mb-4">Solidna brama z wysokiej jakości stali.</p>
+            <div class="mt-auto">
+                <span class="text-teal-600 font-bold text-lg">1 500 PLN</span>
+                <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                    Dodaj do koszyka
+                </button>
+            </div>
+        </div>
+        <!-- Kolejne produkty -->
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+            <img src="https://picsum.photos/300/200?random=2" alt="Brama aluminiowa" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Brama aluminiowa</h3>
+            <p class="text-gray-700 mb-4">Lekka i trwała brama aluminiowa.</p>
+            <div class="mt-auto">
+                <span class="text-teal-600 font-bold text-lg">1 800 PLN</span>
+                <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                    Dodaj do koszyka
+                </button>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+            <img src="https://picsum.photos/300/200?random=3" alt="Brama przesuwna" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Brama przesuwna</h3>
+            <p class="text-gray-700 mb-4">Idealna dla ograniczonej przestrzeni.</p>
+            <div class="mt-auto">
+                <span class="text-teal-600 font-bold text-lg">2 000 PLN</span>
+                <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                    Dodaj do koszyka
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Bramy DIY. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+</body>
+</html>

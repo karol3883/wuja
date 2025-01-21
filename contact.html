@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Bramy DIY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="bg-teal-600 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Bramy DIY</a>
+        <nav class="space-x-4">
+            <a href="/wuja/index.html" class="hover:underline">Strona główna</a>
+            <a href="/wuja/products.html" class="hover:underline">Produkty</a>
+            <a href="/wuja/contact.html" class="hover:underline">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-teal-600 via-teal-500 to-teal-600 text-white py-16 overflow-hidden">
+    <!-- Dekoracyjne elementy -->
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Zawartość -->
+    <div class="relative container mx-auto px-4 text-center">
+        <h1 class="text-5xl font-extrabold mb-6 animate-fade-in">Kontakt</h1>
+        <p class="text-lg max-w-2xl mx-auto mb-8 animate-fade-in-delayed">
+            Jesteśmy tutaj, aby pomóc. Skontaktuj się z nami, a odpowiemy na wszystkie Twoje pytania.
+        </p>
+        <div class="flex justify-center space-x-4">
+            <a href="#map" class="bg-white text-teal-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:scale-105 animate-bounce-in">
+                Zobacz naszą lokalizację
+            </a>
+            <a href="#form" class="bg-white text-teal-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:scale-105 animate-bounce-in">
+                Napisz do nas
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Animacje -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+
+    .animate-bounce-in {
+        animation: bounce-in 1.5s ease-out;
+    }
+</style>
+
+
+<!-- Contact Details and Form -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <!-- Nagłówek -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-teal-600 mb-4">Nasza siedziba</h2>
+            <p class="text-gray-700 text-lg max-w-2xl mx-auto">
+                Odwiedź nas w naszej siedzibie lub skontaktuj się z nami, aby uzyskać więcej informacji o naszych produktach.
+            </p>
+        </div>
+
+        <!-- Szczegóły kontaktowe i mapa -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Informacje kontaktowe --><div class="bg-white rounded-lg shadow-lg p-6 space-y-6">
+            <!-- Adres -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-teal-500 text-white p-4 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a7 7 0 00-7 7c0 4.747 6.086 10.021 6.328 10.227a1 1 0 001.344 0C13.914 19.02 20 13.746 20 9a7 7 0 00-7-7zm0 10a3 3 0 110-6 3 3 0 010 6z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Adres</h3>
+                    <p class="text-gray-700">Bramy DIY Sp. z o.o.<br>Ul. Realna 45<br>01-234 Kraków, Polska</p>
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-teal-500 text-white p-4 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.75 4.75A.75.75 0 013.5 4h17a.75.75 0 01.75.75v14.5a.75.75 0 01-.75.75H3.5a.75.75 0 01-.75-.75V4.75zM5.81 5.5L12 10.245 18.19 5.5H5.81zM4.25 6.565v12.185l6.876-5.143L4.25 6.565zm15.5 0l-6.876 6.042 6.876 5.143V6.565z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">E-mail</h3>
+                    <p class="text-gray-700"><a href="mailto:kontakt@realbramy.pl" class="hover:underline">kontakt@realbramy.pl</a></p>
+                </div>
+            </div>
+
+            <!-- Telefon -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-teal-500 text-white p-4 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.254 3.936c.195-.68 1.015-1.01 1.675-.69l4.183 2.004c.598.287.892.977.693 1.591l-.723 2.226a.75.75 0 01-.86.509l-1.517-.337a14.974 14.974 0 005.004 5.004l.337-1.517a.75.75 0 01.51-.86l2.225-.723c.615-.2 1.305.096 1.591.693l2.004 4.183c.319.66-.01 1.48-.69 1.675a6.347 6.347 0 01-6.665-1.528 18.047 18.047 0 01-5.51-5.51A6.347 6.347 0 012.254 3.936z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Telefon</h3>
+                    <p class="text-gray-700"><a href="tel:+48987654321" class="hover:underline">+48 987 654 321</a></p>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Mapa -->
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.476252829031!2d21.012228315614246!3d52.22967517975873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669db66fd5%3A0x1aefe4c69722ff1c!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1692404836376!5m2!1spl!2spl"
+                        width="100%"
+                        height="350"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="form" class="py-16 bg-gray-100 relative">
+    <!-- Dekoracyjne elementy -->
+    <div class="absolute inset-0 bg-gradient-to-r from-teal-100 via-white to-teal-100 opacity-30 pointer-events-none"></div>
+
+    <!-- Zawartość -->
+    <div class="relative container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-teal-600 mb-4 animate-fade-in">Napisz do nas</h2>
+            <p class="text-gray-700 text-lg max-w-2xl mx-auto animate-fade-in-delayed">
+                Wypełnij formularz, a skontaktujemy się z Tobą najszybciej, jak to możliwe.
+            </p>
+        </div>
+
+        <!-- Formularz kontaktowy -->
+        <form action="#" method="POST" class="bg-white rounded-lg shadow-lg p-8 space-y-6 animate-fade-in-delayed">
+            <!-- Pole: Imię i nazwisko -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Imię i nazwisko</label>
+                <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię i nazwisko"
+                       class="w-full border border-gray-300 rounded-lg p-3 mt-2 focus:ring-teal-500 focus:border-teal-500 transition">
+            </div>
+
+            <!-- Pole: E-mail -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Wpisz swój adres e-mail"
+                       class="w-full border border-gray-300 rounded-lg p-3 mt-2 focus:ring-teal-500 focus:border-teal-500 transition">
+            </div>
+
+            <!-- Pole: Temat -->
+            <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700">Temat</label>
+                <select id="subject" name="subject"
+                        class="w-full border border-gray-300 rounded-lg p-3 mt-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                    <option value="inquiry">Zapytanie o produkty</option>
+                    <option value="support">Wsparcie techniczne</option>
+                    <option value="other">Inne</option>
+                </select>
+            </div>
+
+            <!-- Pole: Wiadomość -->
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Wiadomość</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość"
+                          class="w-full border border-gray-300 rounded-lg p-3 mt-2 focus:ring-teal-500 focus:border-teal-500 transition"></textarea>
+            </div>
+
+            <!-- Przycisk wysyłki -->
+            <button type="submit" class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg w-full shadow-lg transition-transform transform hover:scale-105">
+                Wyślij wiadomość
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Animacje -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+</style>
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Bramy DIY. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+</body>
+</html>
