@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep z bramami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="bg-teal-600 text-white">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Bramy DIY</a>
+        <nav class="space-x-4">
+            <a href="#products" class="hover:underline">Produkty</a>
+            <a href="#about" class="hover:underline">O nas</a>
+            <a href="#contact" class="hover:underline">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section --><section class="relative bg-gray-800 text-white py-16">
+    <!-- Tło zdjęcia -->
+    <div class="absolute inset-0">
+        <img src="https://picsum.photos/1920/1080?random=10" alt="Tło hero" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-gray-800/90"></div>
+    </div>
+
+    <!-- Zawartość sekcji -->
+    <div class="relative container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4 animate-fade-in">Bramy do własnego montażu</h1>
+        <p class="text-lg mb-8 animate-fade-in-delayed">Najwyższa jakość, szybki montaż, przystępne ceny.</p>
+        <a href="#products" class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow-lg transition-transform transform hover:scale-105 animate-bounce-in">
+            Zobacz ofertę
+        </a>
+    </div>
+</section>
+
+<!-- Tailwind Custom Animations -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+
+    .animate-bounce-in {
+        animation: bounce-in 1.5s ease-out;
+    }
+</style>
+
+
+<!-- Products Section -->
+<section id="products" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Nasze produkty</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+                <img src="https://picsum.photos/300/200?random=1" alt="Brama stalowa" class="rounded mb-4 w-full h-48 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Brama stalowa</h3>
+                <p class="text-gray-700 mb-4 flex-grow">Solidna brama z wysokiej jakości stali, idealna do każdego domu.</p>
+                <div class="mt-auto">
+                    <span class="text-teal-600 font-bold text-lg">1 500 PLN</span>
+                    <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                        Dodaj do koszyka
+                    </button>
+                </div>
+            </div>
+            <!-- Kolejne produkty -->
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+                <img src="https://picsum.photos/300/200?random=2" alt="Brama aluminiowa" class="rounded mb-4 w-full h-48 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Brama aluminiowa</h3>
+                <p class="text-gray-700 mb-4 flex-grow">Lekka, trwała i odporna na warunki atmosferyczne.</p>
+                <div class="mt-auto">
+                    <span class="text-teal-600 font-bold text-lg">1 800 PLN</span>
+                    <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                        Dodaj do koszyka
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+                <img src="https://picsum.photos/300/200?random=3" alt="Brama przesuwna" class="rounded mb-4 w-full h-48 object-cover">
+                <h3 class="text-xl font-semibold mb-2">Brama przesuwna</h3>
+                <p class="text-gray-700 mb-4 flex-grow">Idealna dla ograniczonej przestrzeni, łatwa w montażu.</p>
+                <div class="mt-auto">
+                    <span class="text-teal-600 font-bold text-lg">2 000 PLN</span>
+                    <button class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded mt-4 w-full">
+                        Dodaj do koszyka
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="bg-gray-100 py-16 relative">
+    <!-- Tło ozdobne -->
+    <div class="absolute inset-0 bg-gradient-to-r from-teal-100 via-white to-teal-100 opacity-50 pointer-events-none"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Nagłówek sekcji -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-teal-600 mb-4 animate-fade-in">
+                O nas
+            </h2>
+            <p class="text-gray-700 text-lg max-w-3xl mx-auto animate-fade-in-delayed">
+                Jesteśmy liderem w produkcji bram do własnego montażu. Łączymy nowoczesne technologie, prostotę montażu i konkurencyjne ceny, by spełniać oczekiwania nawet najbardziej wymagających klientów.
+            </p>
+        </div>
+
+        <!-- Elementy realizowane -->
+        <div class="space-y-12">
+            <!-- Element 1 -->
+            <div class="flex flex-col lg:flex-row items-center lg:items-start group">
+                <div class="lg:w-1/2 px-4">
+                    <h3 class="text-2xl font-bold mb-2 text-teal-700 group-hover:underline transition">
+                        Wysoka jakość materiałów
+                    </h3>
+                    <p class="text-gray-700">
+                        Nasze bramy wykonane są z trwałych materiałów, które gwarantują wieloletnią niezawodność i estetykę. Każdy element jest dokładnie testowany.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 px-4 mt-6 lg:mt-0 transform group-hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=30" alt="Wysoka jakość" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+            <!-- Element 2 -->
+            <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start group">
+                <div class="lg:w-1/2 px-4">
+                    <h3 class="text-2xl font-bold mb-2 text-teal-700 group-hover:underline transition">
+                        Łatwy montaż
+                    </h3>
+                    <p class="text-gray-700">
+                        Każda nasza brama jest zaprojektowana tak, aby montaż był szybki i prosty, nawet dla osób bez doświadczenia. Z nami zaoszczędzisz czas i nerwy.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 px-4 mt-6 lg:mt-0 transform group-hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=31" alt="Łatwy montaż" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+            <!-- Element 3 -->
+            <div class="flex flex-col lg:flex-row items-center lg:items-start group">
+                <div class="lg:w-1/2 px-4">
+                    <h3 class="text-2xl font-bold mb-2 text-teal-700 group-hover:underline transition">
+                        Konkurencyjne ceny
+                    </h3>
+                    <p class="text-gray-700">
+                        Oferujemy najwyższą jakość w przystępnych cenach, aby każdy mógł sobie pozwolić na nasze produkty. Brama, na którą zasługujesz, bez przepłacania.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 px-4 mt-6 lg:mt-0 transform group-hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=32" alt="Konkurencyjne ceny" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tailwind Custom Animations -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+</style>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="bg-teal-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami!</p>
+        <p class="mt-4">E-mail: kontakt@bramydiy.pl | Telefon: +48 123 456 789</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Bramy DIY. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+</body>
+</html>
