@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykładowa Realizacja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+
+<header class="bg-teal-600 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold">Bramy DIY</a>
+        <nav class="space-x-4">
+            <a href="/wuja/index.html" class="hover:underline">Strona główna</a>
+            <a href="/wuja/products.html" class="hover:underline">Produkty</a>
+            <a href="/wuja/contact.html" class="hover:underline">Kontakt</a>
+            <a href="/wuja/product.html" class="hover:underline">Produkt pojedynczy</a>
+            <a href="/wuja/realization.html" class="hover:underline">Realizacja</a>
+        </nav>
+    </div>
+</header>
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <img src="https://picsum.photos/800/600?random=101" alt="Realizacja" class="rounded-lg shadow-lg">
+            <div>
+                <h2 class="text-2xl font-bold text-teal-600 mb-4">Nowoczesna Brama Aluminiowa</h2>
+                <p class="text-gray-500 text-sm mb-2">Data realizacji: <span class="font-semibold">12 marca 2024</span></p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dla naszego klienta zrealizowaliśmy projekt nowoczesnej bramy aluminiowej. Realizacja obejmowała wykonanie bramy na wymiar,
+                    dostosowanie jej do istniejącej przestrzeni oraz instalację wraz z pełnym serwisem. Nasz zespół zadbał o każdy detal,
+                    od precyzyjnego wykonania elementów aluminiowych, po estetyczne wykończenie.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dodatkowo brama została wyposażona w nowoczesny system automatyki, umożliwiający zdalne sterowanie za pomocą aplikacji mobilnej.
+                    Dzięki temu użytkowanie bramy jest nie tylko wygodne, ale także bezpieczne.
+                </p>
+                <div>
+                    <h3 class="text-lg font-semibold text-teal-600 mb-4">Szczegóły realizacji:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 opacity-0 animate-fade-in">
+                            <span class="flex-shrink-0 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">1</span>
+                            <p class="text-gray-700">Materiał: Aluminium</p>
+                        </li>
+                        <li class="flex items-start space-x-3 opacity-0 animate-fade-in delay-100">
+                            <span class="flex-shrink-0 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">2</span>
+                            <p class="text-gray-700">Kolor: Antracyt</p>
+                        </li>
+                        <li class="flex items-start space-x-3 opacity-0 animate-fade-in delay-200">
+                            <span class="flex-shrink-0 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">3</span>
+                            <p class="text-gray-700">Wymiary: 300 cm x 180 cm</p>
+                        </li>
+                        <li class="flex items-start space-x-3 opacity-0 animate-fade-in delay-300">
+                            <span class="flex-shrink-0 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">4</span>
+                            <p class="text-gray-700">System: Automatyka zdalna</p>
+                        </li>
+                        <li class="flex items-start space-x-3 opacity-0 animate-fade-in delay-400">
+                            <span class="flex-shrink-0 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">5</span>
+                            <p class="text-gray-700">Termin realizacji: 14 dni</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.5s ease forwards;
+    }
+    .animate-fade-in.delay-100 {
+        animation-delay: 0.1s;
+    }
+    .animate-fade-in.delay-200 {
+        animation-delay: 0.2s;
+    }
+    .animate-fade-in.delay-300 {
+        animation-delay: 0.3s;
+    }
+    .animate-fade-in.delay-400 {
+        animation-delay: 0.4s;
+    }
+</style>
+
+
+
+<!-- Gallery Section --><section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-teal-600 mb-6">Galeria</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img src="https://picsum.photos/400/300?random=102" alt="Zdjęcie realizacji" class="rounded-lg shadow-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://picsum.photos/400/300?random=103" alt="Zdjęcie realizacji" class="rounded-lg shadow-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://picsum.photos/400/300?random=104" alt="Zdjęcie realizacji" class="rounded-lg shadow-lg cursor-pointer" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+        <div class="relative bg-white rounded-lg shadow-lg p-6">
+            <button onclick="closeModal()" class="absolute top-2 right-2 bg-red-500 text-white rounded-full h-8 w-8 flex items-center justify-center">
+                &times;
+            </button>
+            <img id="modalImage" src="" alt="Zdjęcie realizacji" class="max-w-full max-h-[80vh] rounded-lg">
+        </div>
+    </div>
+</section>
+
+<script>
+    function openModal(img) {
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = img.src;
+        modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.classList.add('hidden');
+    }
+</script>
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-teal-600 mb-6 text-center">Harmonogram realizacji</h2>
+        <div class="relative">
+            <!-- Central Timeline -->
+            <div class="border-l-2 border-teal-600 relative mx-auto max-w-3xl">
+                <!-- Step 1 -->
+                <div class="mb-10 flex flex-col items-center">
+                    <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                        <span class="w-3 h-3 bg-white rounded-full"></span>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-teal-600">Konsultacja wstępna</h3>
+                        <p class="text-sm text-gray-500">1 lutego 2024</p>
+                        <p class="text-gray-700 mt-2">
+                            Omówienie wymagań klienta, pomiar przestrzeni oraz wybór odpowiedniego rozwiązania.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="mb-10 flex flex-col items-center">
+                    <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                        <span class="w-3 h-3 bg-white rounded-full"></span>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-teal-600">Projekt i akceptacja</h3>
+                        <p class="text-sm text-gray-500">8 lutego 2024</p>
+                        <p class="text-gray-700 mt-2">
+                            Przygotowanie projektu wizualnego i technicznego, zatwierdzenie przez klienta.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="mb-10 flex flex-col items-center">
+                    <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                        <span class="w-3 h-3 bg-white rounded-full"></span>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-teal-600">Produkcja</h3>
+                        <p class="text-sm text-gray-500">15-25 lutego 2024</p>
+                        <p class="text-gray-700 mt-2">
+                            Wykonanie wszystkich elementów bramy w naszym warsztacie.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="mb-10 flex flex-col items-center">
+                    <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                        <span class="w-3 h-3 bg-white rounded-full"></span>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-teal-600">Montaż</h3>
+                        <p class="text-sm text-gray-500">28 lutego 2024</p>
+                        <p class="text-gray-700 mt-2">
+                            Instalacja bramy na miejscu u klienta, dostosowanie i testy działania.
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="mb-10 flex flex-col items-center">
+                    <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
+                        <span class="w-3 h-3 bg-white rounded-full"></span>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-teal-600">Przekazanie projektu</h3>
+                        <p class="text-sm text-gray-500">1 marca 2024</p>
+                        <p class="text-gray-700 mt-2">
+                            Finalizacja projektu, przekazanie klientowi dokumentacji i instrukcji obsługi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-teal-600 mb-6 text-center">Przed i Po</h2>
+        <div class="flex justify-center">
+            <div class="relative w-full max-w-4xl h-96 overflow-hidden group">
+                <!-- Obrazek "Przed" -->
+                <img id="beforeImage" src="https://picsum.photos/800/600?random=105" alt="Przed" class="absolute inset-0 w-full h-full object-cover">
+                <!-- Obrazek "Po" -->
+                <img id="afterImage" src="https://picsum.photos/800/600?random=106" alt="Po" class="absolute inset-0 w-full h-full object-cover clip-right">
+                <!-- Suwak -->
+                <div id="slider" class="absolute inset-y-0 left-1/2 w-1 bg-teal-600 cursor-ew-resize z-20">
+                    <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center">
+                        &#8596;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styl obrazka "Po" z efektem maskowania */
+    .clip-right {
+        clip-path: inset(0 0 0 50%);
+        transition: clip-path 0.3s ease;
+    }
+    /* Aktywny suwak */
+    .group:hover .clip-right {
+        transition: none;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".group");
+        const slider = document.getElementById("slider");
+        const afterImage = document.getElementById("afterImage");
+
+        const moveSlider = (event) => {
+            const rect = container.getBoundingClientRect();
+            let xPos = event.clientX - rect.left; // Pozycja myszki względem kontenera
+            xPos = Math.max(0, Math.min(xPos, rect.width)); // Ogranicz ruch do szerokości kontenera
+            const percentage = (xPos / rect.width) * 100;
+            slider.style.left = `${percentage}%`;
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        };
+
+        slider.addEventListener("mousedown", () => {
+            container.addEventListener("mousemove", moveSlider);
+        });
+
+        document.addEventListener("mouseup", () => {
+            container.removeEventListener("mousemove", moveSlider);
+        });
+
+        container.addEventListener("mouseleave", () => {
+            container.removeEventListener("mousemove", moveSlider);
+        });
+    });
+</script>
+
+
+
+
+
+
+<!-- Call to Action -->
+<section class="py-12 bg-teal-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">Chcesz zrealizować podobny projekt?</h2>
+        <p class="mb-6">Skontaktuj się z nami, aby omówić szczegóły i rozpocząć współpracę.</p>
+        <a href="/kontakt" class="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">Skontaktuj się z nami</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-6 bg-gray-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+</body>
+</html>
