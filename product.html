@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt - Bramy DIY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="bg-teal-600 text-white py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold">Bramy DIY</a>
+        <nav class="space-x-4">
+            <a href="/wuja/index.html" class="hover:underline">Strona główna</a>
+            <a href="/wuja/products.html" class="hover:underline">Produkty</a>
+            <a href="/wuja/contact.html" class="hover:underline">Kontakt</a>
+            <a href="/wuja/product.html" class="hover:underline">Produkt pojedynczy</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative bg-gray-100 py-16">
+    <!-- Dekoracyjne elementy -->
+    <div class="absolute inset-0 bg-gradient-to-r from-teal-100 via-white to-teal-100 opacity-50 pointer-events-none"></div>
+
+    <div class="relative container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Obraz produktu -->
+        <div class="animate-fade-in">
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://picsum.photos/800/600?random=55" alt="Brama stalowa Premium" class="w-full h-auto">
+                <div class="absolute inset-0 bg-teal-500/60 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white text-lg font-semibold absolute bottom-4 left-4">
+                        Brama stalowa Premium – doskonały wybór.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Szczegóły produktu -->
+        <div class="space-y-6 animate-fade-in-delayed">
+            <h1 class="text-4xl font-extrabold text-teal-600">Brama stalowa Premium</h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Wysokiej jakości brama stalowa o nowoczesnym designie. Zapewnia trwałość, niezawodność i łatwy montaż – idealna do każdego domu.
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-center space-x-3">
+                    <span class="bg-teal-500 text-white p-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Solidna stal malowana proszkowo</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <span class="bg-teal-500 text-white p-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Odporność na warunki atmosferyczne</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <span class="bg-teal-500 text-white p-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Łatwy montaż z instrukcją krok po kroku</span>
+                </li>
+            </ul>
+            <div class="text-2xl font-bold text-gray-800">
+                Cena: <span class="text-teal-600">1 500 PLN</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <!-- Technical Specifications Section -->
+        <h2 class="text-2xl font-bold text-teal-600 mb-4">Specyfikacja techniczna</h2>
+        <table class="table-auto w-full bg-white rounded-lg shadow-sm overflow-hidden">
+            <tbody class="divide-y divide-gray-200">
+            <tr>
+                <td class="p-4 font-semibold text-gray-700">Materiał</td>
+                <td class="p-4 text-gray-600">Aluminium</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-semibold text-gray-700">Wymiary</td>
+                <td class="p-4 text-gray-600">200 cm x 150 cm</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-semibold text-gray-700">Waga</td>
+                <td class="p-4 text-gray-600">15 kg</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-semibold text-gray-700">Kolor</td>
+                <td class="p-4 text-gray-600">Antracyt</td>
+            </tr>
+            <tr>
+                <td class="p-4 font-semibold text-gray-700">Gwarancja</td>
+                <td class="p-4 text-gray-600">24 miesiące</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-extrabold text-teal-600 mb-8 text-center">Zobacz również</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Karta produktu 1 -->
+            <a href="/product/1" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                <img src="https://picsum.photos/400/300?random=71" alt="Brama aluminiowa" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-teal-600">Brama aluminiowa</h3>
+                    <p class="text-sm text-gray-700">Lekka, trwała i estetyczna brama aluminiowa.</p>
+                    <span class="text-teal-500 font-bold text-lg">1 800 PLN</span>
+                </div>
+            </a>
+            <!-- Karta produktu 2 -->
+            <a href="/product/2" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                <img src="https://picsum.photos/400/300?random=72" alt="Brama przesuwna" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-teal-600">Brama przesuwna</h3>
+                    <p class="text-sm text-gray-700">Idealna do ograniczonej przestrzeni.</p>
+                    <span class="text-teal-500 font-bold text-lg">2 000 PLN</span>
+                </div>
+            </a>
+            <!-- Karta produktu 3 -->
+            <a href="/product/3" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                <img src="https://picsum.photos/400/300?random=73" alt="Brama segmentowa" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-teal-600">Brama segmentowa</h3>
+                    <p class="text-sm text-gray-700">Nowoczesna brama o minimalistycznym designie.</p>
+                    <span class="text-teal-500 font-bold text-lg">2 200 PLN</span>
+                </div>
+            </a>
+            <!-- Karta produktu 4 -->
+            <a href="/product/4" class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                <img src="https://picsum.photos/400/300?random=74" alt="Brama stalowa z drewnem" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-teal-600">Brama stalowa z drewnem</h3>
+                    <p class="text-sm text-gray-700">Połączenie stali i drewna dla nowoczesnego wyglądu.</p>
+                    <span class="text-teal-500 font-bold text-lg">2 500 PLN</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-8 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <!-- FAQ Section -->
+        <h2 class="text-2xl font-bold text-teal-600 mb-6">Najczęściej zadawane pytania</h2>
+        <div class="space-y-6">
+            <details class="bg-white p-5 rounded-lg shadow-lg group">
+                <summary class="font-semibold text-teal-600 cursor-pointer flex justify-between items-center">
+                    <span>Czy produkt jest odporny na warunki atmosferyczne?</span>
+                    <svg class="w-5 h-5 text-teal-600 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </summary>
+                <p class="text-gray-700 mt-4 leading-relaxed">Oczywiście! Produkt został wykonany z materiałów odpornych na deszcz, śnieg i promieniowanie UV, co czyni go idealnym do użytku zewnętrznego.</p>
+            </details>
+            <details class="bg-white p-5 rounded-lg shadow-lg group">
+                <summary class="font-semibold text-teal-600 cursor-pointer flex justify-between items-center">
+                    <span>Czy dostępne są inne wersje kolorystyczne?</span>
+                    <svg class="w-5 h-5 text-teal-600 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </summary>
+                <p class="text-gray-700 mt-4 leading-relaxed">Tak, nasz produkt jest dostępny w wielu kolorach. Możesz wybrać spośród klasycznych odcieni, takich jak antracyt, biel i czarny, lub zamówić niestandardowy kolor na specjalne życzenie.</p>
+            </details>
+            <details class="bg-white p-5 rounded-lg shadow-lg group">
+                <summary class="font-semibold text-teal-600 cursor-pointer flex justify-between items-center">
+                    <span>Jak długo trwa dostawa?</span>
+                    <svg class="w-5 h-5 text-teal-600 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </summary>
+                <p class="text-gray-700 mt-4 leading-relaxed">Zamówienia realizujemy w ciągu 3-5 dni roboczych. Jeśli produkt nie jest dostępny od ręki, skontaktujemy się, aby ustalić szczegóły dostawy.</p>
+            </details>
+            <details class="bg-white p-5 rounded-lg shadow-lg group">
+                <summary class="font-semibold text-teal-600 cursor-pointer flex justify-between items-center">
+                    <span>Jakie są możliwości personalizacji?</span>
+                    <svg class="w-5 h-5 text-teal-600 transform group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </summary>
+                <p class="text-gray-700 mt-4 leading-relaxed">Możesz dostosować kolor, wymiary i niektóre elementy projektu, aby produkt idealnie pasował do Twoich potrzeb. Skontaktuj się z nami, aby poznać szczegóły.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Bramy DIY. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
+
+<!-- Animacje -->
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+</style>
+</body>
+</html>
